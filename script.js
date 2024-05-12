@@ -76,17 +76,93 @@ output=document.getElementById("output2");
 
 
 // Object Destructuruing
-const studentDetails= {
-  name: "Student",
-  address:"Rockdale",
- age:4,
- phone:'12345678'
-};   
+// const studentDetails= {
+//   name: "Student",
+//   address:"Rockdale",
+//  age:4,
+//  phone:'12345678'
+// };   
 
-const {name, address: fullAdress, roomNumber=12} = studentDetails
-output.innerText=fullAdress;
+// // const {name, address: fullAdress, roomNumber=12} = studentDetails2
+// // output.innerText=fullAdress;
 
-// Default Parameters, Rest Parameters, And Spread
+// // Default Parameters, Rest Parameters, And Spread
 
-const addNum = (a=2,b=3) =>a+b;
-output.innerText= addNum(4,7)
+// // const addNum = (a=2,b=3) =>a+b;
+// // output.innerText= addNum(4,7);
+
+// const printDetails= ({name="Whatever Default"})=>{
+//   return name ;
+// }
+// output.innerText=printDetails(studentDetails);
+
+
+// // rest
+// const printDetails2= (address,  ...studentDetails)=>{
+//   return address;
+// }
+// output.innerText = printDetails2(studentDetails)
+
+
+// // Date Manipulation
+// const currentDate= new Date()
+// output.innerText= currentDate
+// // extract Get info 
+// output.innerText=currentDate.getTime();
+// output.innerText=currentDate.getFullYear();
+// output.innerText=currentDate.getMonth();
+// output.innerText=currentDate.getMinutes();
+
+
+// // Set Methods
+
+// output.innerText=currentDate.setMinutes();
+// output.innerText=currentDate.setDate(currentDate.getDate()+10);
+
+
+// // date Formatting
+// output.innerText= currentDate.toLocaleDateString();
+
+// const birthday= new Date("1999/08/3");
+// output.innerText= birthday.getDay();
+
+
+// // TimeScheduling 
+// const printLogs= ()=> console.log("HELLOO!!!");
+
+
+
+// setTimeout(printLogs,3000)
+
+
+// const greetUser=()=>alert("welcome to my website");
+// setTimeout(greetUser, 3000);
+// // setInterval(greetUser, 3000);
+
+
+// // Clear TimeOut
+
+// const time= setInterval(printLogs, 3000);
+// setTimeout(()=>clearInterval(time), 9001);
+
+// let counter= 100;
+// const countDown = setInterval(()=>{
+// console.log("Birthday Celebration Starting Soon");
+// counter ++
+// },1000);
+
+// if (counter===0){
+//   clearInterval()
+//   console.log("YAAH !!! HBD");
+// }
+
+
+// Regex Regular Expression
+// Syntax 
+// --/pattern/modifiers(s)
+
+const sentence = "The quick brown fox jumps over the lazy dog"
+const regex = /\brown/
+
+output.innerText= sentence.match(regex);
+
